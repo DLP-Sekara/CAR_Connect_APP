@@ -1,39 +1,29 @@
-import {
-  Image,
-  Modal,
-  //KeyboardAvoidingView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {Image, Modal, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {Button, FormControl, Input, Link} from 'native-base';
 import {NativeBaseProvider} from 'native-base';
 const Dashboard = () => {
   const [opacity, setOpacity] = useState(1);
-  const [signInModalVisible, setSignInModalVisible] = useState(false);
-  const [signUpModalVisible, setSignUPModalVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState('dashboard');
 
   const openSignInModel = () => {
     const newOpacity = opacity === 1 ? 0.2 : 1;
     setOpacity(newOpacity);
-    setSignInModalVisible(true);
+    setModalVisible('signInModel');
   };
   const openSignUpModel = () => {
-    setSignInModalVisible(false);
-    setSignUPModalVisible(true);
+    setModalVisible('signUpModel');
   };
   const openSignInModelFromSignUP = () => {
-    setSignInModalVisible(true);
-    setSignUPModalVisible(false);
+    setModalVisible('signInModel');
   };
   function closeSignInModal(): void {
     setOpacity(1);
-    setSignInModalVisible(false);
+    setModalVisible('dashboard');
   }
   function closeSignUpModal(): void {
     setOpacity(1);
-    setSignUPModalVisible(false);
+    setModalVisible('dashboard');
   }
   return (
     <NativeBaseProvider>
@@ -62,7 +52,7 @@ const Dashboard = () => {
         <Modal
           animationType="slide"
           transparent={true}
-          visible={signInModalVisible}>
+          visible={modalVisible === 'signInModel' ? true : false}>
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
               <Text style={styles.modalText}>Sign in to continue!</Text>
@@ -129,9 +119,9 @@ const Dashboard = () => {
 
         {/* sign up model area */}
         <Modal
-          animationType="fade"
+          animationType="slide"
           transparent={true}
-          visible={signUpModalVisible}>
+          visible={modalVisible === 'signUpModel' ? true : false}>
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
               <Text style={styles.modalText}>Sign up to continue!</Text>
