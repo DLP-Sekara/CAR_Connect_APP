@@ -1161,6 +1161,13 @@
   "resolved" "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   "version" "0.2.3"
 
+"@egjs/hammerjs@^2.0.17":
+  "integrity" "sha512-XQsZgjm2EcVUiZQf11UBJQfmZeEmOW8DpI1gsFeln6w0ae0ii4dMQEQ0kjl6DspdWX1aGY1/loyXnP0JS06e/A=="
+  "resolved" "https://registry.npmjs.org/@egjs/hammerjs/-/hammerjs-2.0.17.tgz"
+  "version" "2.0.17"
+  dependencies:
+    "@types/hammerjs" "^2.0.36"
+
 "@emotion/babel-plugin@^11.11.0":
   "integrity" "sha512-m4HEDZleaaCH+XgDDsPF15Ht6wTLsgDTeR3WYj9Q/k76JtWhrJjcP4+/XlG8LGT/Rol9qUfOIztXeA84ATpqPQ=="
   "resolved" "https://registry.npmjs.org/@emotion/babel-plugin/-/babel-plugin-11.11.0.tgz"
@@ -2936,6 +2943,11 @@
   "version" "4.1.6"
   dependencies:
     "@types/node" "*"
+
+"@types/hammerjs@^2.0.36":
+  "integrity" "sha512-ewXv/ceBaJprikMcxCmWU1FKyMAQ2X7a9Gtmzw8fcg2kIePI1crERDM818W+XYrxqdBBOdlf2rm137bU+BltCA=="
+  "resolved" "https://registry.npmjs.org/@types/hammerjs/-/hammerjs-2.0.41.tgz"
+  "version" "2.0.41"
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   "integrity" "sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g=="
@@ -5080,7 +5092,7 @@
   dependencies:
     "source-map" "^0.7.3"
 
-"hoist-non-react-statics@^3.3.1":
+"hoist-non-react-statics@^3.3.0", "hoist-non-react-statics@^3.3.1":
   "integrity" "sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw=="
   "resolved" "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
   "version" "3.3.2"
@@ -7220,7 +7232,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@*", "prop-types@^15.6.2", "prop-types@^15.8.1":
+"prop-types@*", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -7328,6 +7340,17 @@
   "resolved" "https://registry.npmjs.org/react-native-flex-layout/-/react-native-flex-layout-0.1.5.tgz"
   "version" "0.1.5"
 
+"react-native-gesture-handler@^2.12.0":
+  "integrity" "sha512-rr+XwVzXAVpY8co25ukvyI38fKCxTQjz7WajeZktl8qUPdh1twnSExgpT47DqDi4n+m+OiJPAnHfZOkqqAQMOg=="
+  "resolved" "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.12.0.tgz"
+  "version" "2.12.0"
+  dependencies:
+    "@egjs/hammerjs" "^2.0.17"
+    "hoist-non-react-statics" "^3.3.0"
+    "invariant" "^2.2.4"
+    "lodash" "^4.17.21"
+    "prop-types" "^15.7.2"
+
 "react-native-gradle-plugin@^0.71.18":
   "integrity" "sha512-7F6bD7B8Xsn3JllxcwHhFcsl9aHIig47+3eN4IHFNqfLhZr++3ElDrcqfMzugM+niWbaMi7bJ0kAkAL8eCpdWg=="
   "resolved" "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.18.tgz"
@@ -7338,10 +7361,10 @@
   "resolved" "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-3.3.2.tgz"
   "version" "3.3.2"
 
-"react-native-screens@>= 3.0.0":
-  "integrity" "sha512-joWUKWAVHxymP3mL9gYApFHAsbd9L6ZcmpoZa6Sl3W/82bvvNVMqcfP7MeNqVCg73qZ8yL4fW+J/syusHleUgg=="
-  "resolved" "https://registry.npmjs.org/react-native-screens/-/react-native-screens-3.20.0.tgz"
-  "version" "3.20.0"
+"react-native-screens@^3.21.1", "react-native-screens@>= 3.0.0":
+  "integrity" "sha512-asyqTA/0Ij9Sa16zB9YCUmZku5bf8RVKS0FKKhS2jfmF98BFt5XV6ldvM+Ze9cwgssSyRz4jYOIDSK1Wr5ZaYQ=="
+  "resolved" "https://registry.npmjs.org/react-native-screens/-/react-native-screens-3.21.1.tgz"
+  "version" "3.21.1"
   dependencies:
     "react-freeze" "^1.0.0"
     "warn-once" "^0.1.0"

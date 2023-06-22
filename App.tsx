@@ -1,18 +1,23 @@
 import * as React from 'react';
-//import {NavigationContainer} from '@react-navigation/native';
-//import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Dashboard from './src/pages/Dashboard/Dashboard';
-
-//const Stack = createNativeStackNavigator();
+import AllCars from './src/pages/AllCars/AllCars';
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    // <NavigationContainer>
-    //   <Stack.Navigator>
-    //     <Stack.Screen name="Profile" component={Dashboard} />
-    //   </Stack.Navigator>
-    // </NavigationContainer>
-    <Dashboard />
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Dashboard"
+          options={{headerShown: false}}
+          component={Dashboard}
+        />
+        <Stack.Screen name="Allcars" component={AllCars} />
+      </Stack.Navigator>
+    </NavigationContainer>
+    // <Dashboard />
   );
 };
 export default App;

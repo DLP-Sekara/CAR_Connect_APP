@@ -2,7 +2,8 @@ import {Image, Modal, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {Button, FormControl, Input, Link} from 'native-base';
 import {NativeBaseProvider} from 'native-base';
-const Dashboard = () => {
+// import {AllCars} from '../AllCars/AllCars';
+const Dashboard = ({navigation}: any) => {
   const [opacity, setOpacity] = useState(1);
   const [modalVisible, setModalVisible] = useState('dashboard');
 
@@ -25,6 +26,10 @@ const Dashboard = () => {
     setOpacity(1);
     setModalVisible('dashboard');
   }
+  function signInOnAction(): void {
+    navigation.navigate('Allcars');
+  }
+
   return (
     <NativeBaseProvider>
       <View style={styles.background}>
@@ -82,7 +87,10 @@ const Dashboard = () => {
                     Forget Password?
                   </Link>
                 </FormControl>
-                <Button mt="2" style={styles.signInBtn}>
+                <Button
+                  mt="2"
+                  style={styles.signInBtn}
+                  onPress={() => signInOnAction()}>
                   <Text style={styles.signInBtnTxt}>Sign in</Text>
                 </Button>
 
